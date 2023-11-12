@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  list-style: none;
+  position: relative;
+}
+
+.detail {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  all: unset;
+  color: #FFFFFF;
+  font-weight: 700;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 4% 0;
+  margin: 15px 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0 0px 0px rgba(255, 196, 192, 0.6901960784);
+  transition: 0.4s ease-in-out;
+}
+.button::before {
+  background: hsl(235, 18%, 25%);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  z-index: -1;
+  background: linear-gradient(to right, hsl(235, 18%, 25%), #FF5478 33%, #FF634D);
+  transition: 0.3s ease-in-out;
+}
+.button:hover {
+  box-shadow: 0 15px 20px rgba(255, 196, 192, 0.7568627451);
+}
+.button:hover::before {
+  left: -100%;
+}
+.button:hover::after {
+  left: -50%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #36384D;
+  overflow: hidden;
+}
+body .main {
+  display: flex;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 17px;
+  max-width: 800px;
+  left: -100%;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+body .main .form-container {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+body .main .form-container .heading {
+  font-size: 320%;
+  font-weight: 700;
+}
+body .main .form-container form {
+  width: 100%;
+}
+body .main .form-container form div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body .main .form-container form div label {
+  font-size: smaller;
+  font-weight: 700;
+  display: inline-block;
+}
+body .main .form-container form div span {
+  font-size: smaller;
+  font-weight: 700;
+  display: inline-block;
+  color: red;
+  opacity: 0;
+  transition: 0.1s ease-in;
+}
+body .main .form-container form.error div span {
+  opacity: 1 !important;
+}
+body .main .form-container form.error input {
+  border-color: red;
+  color: red;
+  background-color: rgba(255, 192, 192, 0.82);
+}
+body .main .form-container form input {
+  all: unset;
+  border: 2px solid hsl(231, 7%, 60%);
+  width: 89%;
+  padding: 4% 5%;
+  border-radius: 10px;
+  margin: 15px 0;
+  transition: 0.1s ease-in-out;
+}
+body .main .form-container ul {
+  padding: 0;
+}
+body .main .form-container ul li {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+body .main .form-container ul li img {
+  margin: 0 10px 0 0;
+}
+body .main .image-container {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+}
+body .main .image-container img {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-height: 100%;
+}
+body .main .image-container img.mobiles {
+  display: none;
+}
+body .main .image-container img.desktop {
+  display: block;
+}
+body .main.active {
+  left: 0;
+  opacity: 1;
+}
+
+.message {
+  background-color: #FFFFFF;
+  border-radius: 17px;
+  max-width: 300px;
+  padding: 20px 40px 10px;
+  left: 50%;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.message img {
+  width: 50px;
+}
+.message p {
+  margin-bottom: 10px;
+}
+.message p .email {
+  font-weight: 700;
+}
+.message.active {
+  transition-delay: 0.3s;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 375px) {
+  body .main {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+  }
+  body .main .image-container img.desktop {
+    display: none;
+  }
+  body .main .image-container img.mobiles {
+    display: block;
+  }
+  body .message {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  body .message img {
+    margin-top: 50%;
+  }
+}/*# sourceMappingURL=style.css.map */

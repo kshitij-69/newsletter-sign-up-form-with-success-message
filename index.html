@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="form-container">
+        <h1 class="heading">Stay updated!</h1>
+        <p class="detail">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul>
+          <li>
+            <img src="./assets/images/icon-list.svg" alt="success" />
+            <p class="detail">Product discovery and building what matters</p>
+          </li>
+          <li>
+            <img src="./assets/images/icon-list.svg" alt="success" />
+            <p class="detail">Measuring to ensure updates are a success</p>
+          </li>
+          <li>
+            <img src="./assets/images/icon-list.svg" alt="success" />
+            <p class="detail">And much more!</p>
+          </li>
+        </ul>
+        <form>
+          <div>
+            <label for="email-add">Email Address</label>
+            <span>Valid email required</span>
+          </div>
+          <input
+            placeholder="email@company.com"
+            type="text"
+            name="email"
+            id="email-add"
+          />
+          <button class="button" type="submit">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+      <div class="image-container">
+        <img
+          class="desktop"
+          src="./assets/images/illustration-sign-up-desktop.svg"
+          alt=""
+        />
+        <img
+          class="mobiles"
+          src="./assets/images/illustration-sign-up-mobile.svg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="message">
+      <div>
+        <img src="./assets//images/icon-success.svg" alt="" />
+        <h1 class="heading">Thanks for subscribing!</h1>
+        <p class="detail">
+          A confirmation has been sent to
+          <span class="email"></span>. Please open it and click the button
+          inside to confirm your subscrption
+        </p>
+      </div>
+      <button id="btn" class="button">Dismiss Message</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
